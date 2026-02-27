@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WorkHub Coworking</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <h1>WorkHub Coworking</h1>
+
+  <h2>Registro Workshop</h2>
+
+    <form id="formulario">
+
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Apellido:</label><br>
+        <input type="text" name="apellido" required><br><br>
+
+        <label>Correo:</label><br>
+        <input type="email" name="correo" required><br><br>
+
+        <label>Contraseña:</label><br>
+        <input type="password" name="password" minlength="6" required><br><br>
+
+        <label>Día:</label><br>
+        <input type="date" name="fecha" required><br><br>
+
+        <label>Hora:</label><br>
+        <input type="time" name="hora" min="08:00" max="18:00" required><br><br>
+
+        <p>
+            Horarios:<br>
+            Lunes a Viernes: 08:00 - 18:00<br>
+            Sábado: 08:00 - 14:00
+        </p>
+
+        <button type="submit">Registrarse</button>
+
+    </form>
+
+
   <script src="js/app.js"></script>
 </body>
+
 </html>
