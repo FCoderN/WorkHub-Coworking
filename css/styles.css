@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*placeholder de las tarjetas */
+.formulario-card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    border-top: 6px solid #007bff;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.horarios-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #6c757d;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: #495057;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    padding: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
