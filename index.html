@@ -65,13 +65,54 @@
                     </form>
                 </div>
             </div>
-            
+
     </Header>
 
     <hr>
     <main> <!--contenedor Main con el fondo de inicio-->
-           
+        
         <Section>
+            
+            <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+                <div class="formulario-card">
+                    <h3 class="text-center mb-4">Reserva de Cowork</h3>
+
+                    <form id="formulario">
+                        <label class="form-label">Nombre:</label>
+                        <input type="text" class="form-control mb-3" name="nombre" required>
+
+                        <label class="form-label">Apellido:</label>
+                        <input type="text" class="form-control mb-3" name="apellido" required>
+
+                        <label class="form-label">Correo:</label>
+                        <input type="email" class="form-control mb-3" name="correo" required>
+
+                        <label class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control mb-3" name="password" minlength="6" required>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="form-label">Día:</label>
+                                <input type="date" class="form-control mb-3" name="fecha" required>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Hora:</label>
+                                <input type="time" class="form-control mb-3" name="hora" min="08:00" max="18:00"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="horarios-box">
+                            <p class="mb-0"><strong>Horarios Disponibles:</strong></p>
+                            <small>Lunes a Viernes: 08:00 - 18:00 | Sábado: 08:00 - 14:00</small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Registrar Espacio</button>
+                    </form>
+                </div>
+            </div> <!--Formulario de reserva agregado para que los usuarios puedan reservar un espacio de coworking-->
+
 
         </Section>
 
@@ -80,7 +121,6 @@
     <hr>
 
     <Footer> <!--inicio FOOTER para que puedan trabajar en el-->
-
 
     </Footer>
 
@@ -93,6 +133,6 @@
     <script src="/js/app.js"></script>
 
 
-    </body>
+</body>
 
 </html>
