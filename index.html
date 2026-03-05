@@ -1,50 +1,138 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WorkHub Coworking</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Claude</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <h1>WorkHub Coworking</h1>
+    <Header class="contHero"> <!--contenedor header con el menu de navegacion y tambien con imagen HERO-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!--contenedor menu de navegacion-->
+            <div class="container">
+                <nav class="navbar navbar-dark bg-transparent">
+                    <div class="container-fluid">
+                        <a class="navbar-brand d-flex align-items-center" href="#">
+                            <h3 class="mb-0 me-2">WorkHub Coworking</h3>
+                            <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/128/6543/6543839.png"
+                                alt="Logo" width="40" height="34" class="d-inline-block align-text-top">
+                            <!--Icono agregado desde pagina externa-->
+                        </a>
+                    </div>
+                </nav>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="">Home</a>
+                            <!--Enlace agregado para redireccionar a la misma pagina-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#salas">Salas</a>
+                            <!--Enlace agregado para redireccionar a la seccion de salas-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                            <!--Enlace agregado para redireccionar a la seccion de servicios-->
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"> <!--Enlace agregado para desplegar el menu de contacto-->
+                                Contacto
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#reserva">Empresas</a></li>
+                                <!--Enlace agregado para UN FORMULARIO PARA EMPRESAS O UN CORREO CONTACTO? -->
+                                <li><a class="dropdown-item" href="#redes">Redes Sociales</a></li>
+                                <!--Enlace agregado para redireccionar A la seccion de redes sociales-->
 
-  <h2>Registro Workshop</h2>
+                            </ul>
+                        </li>
 
-    <form id="formulario">
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <button class="btn btn-warning btn-lg" type="submit" href="#formulario">Reserva Ahora!</button>
+                        <!--Boton agregado para redireccionar a un formulario de reserva Y A LA AGENDA DISPONIBLE-->
+                    </form>
+                </div>
+            </div>
 
-        <label>Nombre:</label><br>
-        <input type="text" name="nombre" required><br><br>
+    </Header>
 
-        <label>Apellido:</label><br>
-        <input type="text" name="apellido" required><br><br>
+    <hr>
+    <main> <!--contenedor Main con el fondo de inicio-->
+        
+        <Section>
+            
+            <div class="container d-flex justify-content-center align-items-center min-vh-100">
 
-        <label>Correo:</label><br>
-        <input type="email" name="correo" required><br><br>
+                <div class="formulario-card">
+                    <h3 class="text-center mb-4">Reserva de Cowork</h3>
 
-        <label>Contraseña:</label><br>
-        <input type="password" name="password" minlength="6" required><br><br>
+                    <form id="formulario">
+                        <label class="form-label">Nombre:</label>
+                        <input type="text" class="form-control mb-3" name="nombre" required>
 
-        <label>Día:</label><br>
-        <input type="date" name="fecha" required><br><br>
+                        <label class="form-label">Apellido:</label>
+                        <input type="text" class="form-control mb-3" name="apellido" required>
 
-        <label>Hora:</label><br>
-        <input type="time" name="hora" min="08:00" max="18:00" required><br><br>
+                        <label class="form-label">Correo:</label>
+                        <input type="email" class="form-control mb-3" name="correo" required>
 
-        <p>
-            Horarios:<br>
-            Lunes a Viernes: 08:00 - 18:00<br>
-            Sábado: 08:00 - 14:00
-        </p>
+                        <label class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control mb-3" name="password" minlength="6" required>
 
-        <button type="submit">Registrarse</button>
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="form-label">Día:</label>
+                                <input type="date" class="form-control mb-3" name="fecha" required>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Hora:</label>
+                                <input type="time" class="form-control mb-3" name="hora" min="08:00" max="18:00"
+                                    required>
+                            </div>
+                        </div>
 
-    </form>
+                        <div class="horarios-box">
+                            <p class="mb-0"><strong>Horarios Disponibles:</strong></p>
+                            <small>Lunes a Viernes: 08:00 - 18:00 | Sábado: 08:00 - 14:00</small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Registrar Espacio</button>
+                    </form>
+                </div>
+            </div> <!--Formulario de reserva agregado para que los usuarios puedan reservar un espacio de coworking-->
 
 
-  <script src="js/app.js"></script>
+        </Section>
+
+    </main>
+
+    <hr>
+
+    <Footer> <!--inicio FOOTER para que puedan trabajar en el-->
+
+    </Footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="/js/app.js"></script>
+
+
 </body>
 
 </html>
