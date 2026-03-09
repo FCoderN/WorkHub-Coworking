@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar Espacio — WorkHub Coworking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="reserva-page">
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand" href="index.html">
+      WORK<span class="dot">HUB</span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#resNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="resNav">
+      <ul class="navbar-nav me-auto gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="reserva.html">Mis Reservas</a></li>
+      </ul>
+
+      <!-- Usuario simulado + cerrar sesión -->
+      <div class="nav-auth">
+        <span class="btn-nav-ghost" style="cursor:default;">
+          <i class="bi bi-person-circle me-1"></i> Mi Cuenta
+        </span>
+        <a href="login.html" class="btn-nav-gold">Cerrar Sesión</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ========== HERO DE SECCIÓN ========== -->
+<div class="reserva-hero">
+  <h1>Nueva <em>Reserva</em></h1>
+  <p>Elige el espacio, la fecha y la hora. Confirma en un solo clic.</p>
+</div>
+
+
+<!-- ========== CONTENIDO PRINCIPAL ========== -->
+<div class="reserva-main">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Columna formulario -->
+      <div class="col-12 col-lg-7">
+
+        <form id="frmReserva" novalidate>
+
+          <!-- PASO 1: Elegir espacio -->
+          <div class="mb-4 fade-up">
+            <p class="section-label mb-3">Paso 1 — Elige tu Espacio</p>
+
+            <!-- Card: Escritorio Individual -->
+            <label class="space-radio-label">
+              <input type="radio" name="sala" value="escritorio">
+              <div class="radio-dot"></div>
+              <div class="radio-info">
+                <strong>Solo Desk</strong>
+                <small>1 persona · WiFi · Escritorio ergonómico</small>
+              </div>
+              <span class="radio-price">$5.000</span>
+            </label>
+
+            <!-- Card: Sala de Reuniones -->
+            <label class="space-radio-label">
+              <input type="radio" name="sala" value="reunion">
+              <div class="radio-dot"></div>
+              <div class="radio-info">
+                <strong>Meeting Room</strong>
+                <small>8 personas · Pantalla · Pizarra · WiFi</small>
+              </div>
+              <span class="radio-price">$10.000</span>
+            </label>
+
+            <!-- Card: Oficina Privada -->
+            <label class="space-radio-label">
+              <input type="radio" name="sala" value="oficina">
+              <div class="radio-dot"></div>
+              <div class="radio-info">
+                <strong>Private Office</strong>
+                <small>4 personas · A/C · Pantalla · WiFi</small>
+              </div>
+              <span class="radio-price">$20.000</span>
+            </label>
+          </div>
+
+          <!-- PASO 2: Fecha y hora -->
+          <div class="mb-4 fade-up">
+            <p class="section-label mb-3">Paso 2 — Fecha y Hora</p>
+
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="field-group">
+                  <label class="field-label">Día</label>
+                  <input type="date" name="fecha" class="f-control" required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="field-group">
+                  <label class="field-label">Hora de Inicio</label>
+                  <input type="time" name="hora" class="f-control"
+                         min="08:00" max="18:00" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="horario-box">
+              <p>
+                <i class="bi bi-info-circle me-1"></i>
+                <strong>Horarios disponibles:</strong>
+                Lun–Vie 08:00–18:00 &nbsp;·&nbsp; Sáb 08:00–14:00
+              </p>
+            </div>
+          </div>
+
+          <!-- PASO 3: Comentario opcional -->
+          <div class="mb-4 fade-up">
+            <p class="section-label mb-3">Paso 3 — Comentarios (Opcional)</p>
+            <div class="field-group">
+              <label class="field-label">¿Necesitas algo en especial?</label>
+              <textarea name="comentario" class="f-control"
+                        rows="3" placeholder="Ej: necesito monitor extra, acceso anticipado..."></textarea>
+            </div>
+          </div>
+
+          <div class="fade-up">
+            <button type="submit" class="btn-dark-full">Confirmar Reserva</button>
+          </div>
+
+        </form>
+      </div>
+
+
+      <!-- Columna resumen -->
+      <div class="col-12 col-lg-4 offset-lg-1 fade-up">
+        <div class="resumen-box">
+          <h4>Resumen de Reserva</h4>
+
+          <div class="resumen-line">
+            <span>Espacio</span>
+            <strong id="resEspacio">—</strong>
+          </div>
+          <div class="resumen-line">
+            <span>Fecha</span>
+            <strong id="resFecha">—</strong>
+          </div>
+          <div class="resumen-line">
+            <span>Hora</span>
+            <strong id="resHora">—</strong>
+          </div>
+          <div class="resumen-line">
+            <span>Duración</span>
+            <strong>1 hora</strong>
+          </div>
+
+          <div class="resumen-total">
+            <span>Total</span>
+            <span class="price" id="resPrecio">—</span>
+          </div>
+
+          <!-- Info adicional -->
+          <ul style="list-style:none; margin-top:1.2rem;">
+            <li style="font-size:0.76rem; color:var(--light); padding:0.3rem 0; display:flex; align-items:center; gap:0.5rem;">
+              <i class="bi bi-check-circle" style="color:var(--gold);"></i>
+              Confirmación inmediata por correo
+            </li>
+            <li style="font-size:0.76rem; color:var(--light); padding:0.3rem 0; display:flex; align-items:center; gap:0.5rem;">
+              <i class="bi bi-check-circle" style="color:var(--gold);"></i>
+              Cancelación gratis hasta 2 hrs antes
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== FOOTER MÍNIMO ========== -->
+<footer style="background-color:#0E0E0E; padding:2rem 0; margin-top:3rem;">
+  <div class="container">
+    <div class="footer-bottom" style="margin-top:0; padding-top:0; border:none;">
+      <p>© 2025 WorkHub Coworking · <a href="index.html" style="color:var(--gold);">Volver al Inicio</a></p>
+    </div>
+  </div>
+</footer>
+
+<div id="whToast" class="wh-toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

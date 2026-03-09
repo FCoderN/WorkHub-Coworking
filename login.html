@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión — WorkHub Coworking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Navbar mínima solo en móvil -->
+<div class="auth-mobile-nav">
+  <a href="index.html" class="auth-mobile-logo">WORK<span class="dot">HUB</span></a>
+  <a href="index.html" class="auth-mobile-back">← Volver</a>
+</div>
+
+<!-- Layout split -->
+<div class="auth-page">
+
+  <!-- Panel izquierdo con imagen (solo tablet/desktop) -->
+  <aside class="auth-panel">
+    <a href="index.html" class="auth-panel-logo">WORK<span class="dot">HUB</span></a>
+
+    <div class="auth-panel-body">
+      <p class="auth-panel-tag">Bienvenido de vuelta</p>
+      <h2>Accede a tu<br>espacio <em>favorito</em></h2>
+      <p>Inicia sesión para ver disponibilidad y gestionar tus reservas.</p>
+
+      <ul class="auth-panel-list">
+        <li><i class="bi bi-calendar-check"></i> Administra todas tus reservas</li>
+        <li><i class="bi bi-arrow-repeat"></i> Reservas recurrentes disponibles</li>
+        <li><i class="bi bi-envelope"></i> Confirmación automática por correo</li>
+        <li><i class="bi bi-geo-alt"></i> Av. Providencia 1234, Santiago</li>
+      </ul>
+    </div>
+
+    <p style="font-size:0.75rem; color:rgba(255,255,255,0.3);">© 2025 WorkHub Coworking</p>
+  </aside>
+
+  <!-- Panel derecho: formulario -->
+  <main class="auth-form-panel">
+    <div class="auth-form-inner">
+
+      <p class="auth-step">Acceso</p>
+      <h1>Iniciar Sesión</h1>
+      <p>Ingresa tus credenciales para acceder a tu cuenta.</p>
+
+      <form id="frmLogin" novalidate>
+
+        <!-- Correo -->
+        <div class="field-group">
+          <label class="field-label">Correo Electrónico</label>
+          <input type="email" name="correo" class="f-control" placeholder="tu@correo.com" required>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="field-group">
+          <label class="field-label">Contraseña</label>
+          <input type="password" name="password" class="f-control"
+                 placeholder="Tu contraseña" required>
+        </div>
+
+        <!-- Recordar sesión -->
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <label style="font-size:0.83rem; color:var(--mid); display:flex; align-items:center; gap:0.4rem; cursor:pointer;">
+            <input type="checkbox" name="recordar" style="accent-color:var(--gold);">
+            Recordarme
+          </label>
+          <a href="#" style="font-size:0.8rem; color:var(--gold);">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button type="submit" class="btn-dark-full">Ingresar</button>
+
+      </form>
+
+      <div class="auth-divider">o</div>
+
+      <p class="auth-link">
+        ¿No tienes cuenta? <a href="registro.html">Regístrate gratis</a>
+      </p>
+
+    </div>
+  </main>
+
+</div>
+
+<div id="whToast" class="wh-toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

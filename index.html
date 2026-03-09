@@ -1,149 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House Claude</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkHub Coworking — Espacios para Trabajar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <Header class="contHero"> <!--contenedor header con el menu de navegacion y tambien con imagen HERO-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!--contenedor menu de navegacion-->
-            <div class="container">
-                <nav class="navbar navbar-dark bg-transparent">
-                    <div class="container-fluid">
-                        <a class="navbar-brand d-flex align-items-center" href="#">
-                            <h3 class="mb-0 me-2">WorkHub Coworking</h3>
-                            <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/128/6543/6543839.png" alt="Logo" width="40" height="34" class="d-inline-block align-text-top">  <!--Icono agregado desde pagina externa-->
-                           
-                        </a>
-                    </div>
-                </nav>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">Home</a>
-                            <!--Enlace agregado para redireccionar a la misma pagina-->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#salas">Salas</a>
-                            <!--Enlace agregado para redireccionar a la seccion de salas-->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#servicios">Servicios</a>
-                            <!--Enlace agregado para redireccionar a la seccion de servicios-->
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false"> <!--Enlace agregado para desplegar el menu de contacto-->
-                                Contacto
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#reserva">Empresas</a></li>
-                                <!--Enlace agregado para UN FORMULARIO PARA EMPRESAS O UN CORREO CONTACTO? -->
-                                <li><a class="dropdown-item" href="#redes">Redes Sociales</a></li>
-                                <!--Enlace agregado para redireccionar A la seccion de redes sociales-->
 
-                            </ul>
-                        </li>
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
 
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-warning btn-lg" type="submit" href="#formulario">Reserva Ahora!</button>
-                        <!--Boton agregado para redireccionar a un formulario de reserva Y A LA AGENDA DISPONIBLE-->
-                    </form>
-                </div>
+    <a class="navbar-brand" href="index.html">
+      WORK<span class="dot">HUB</span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto gap-lg-1">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#espacios">Espacios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Contacto</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="mailto:hola@workhub.cl">Empresas</a></li>
+            <li><a class="dropdown-item" href="#footer">Redes Sociales</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Botones de Registro e Inicio de Sesión -->
+      <div class="nav-auth">
+        <a href="registro.html" class="btn-nav-ghost">Registrarse</a>
+        <a href="login.html"    class="btn-nav-gold">Iniciar Sesión</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-pill">Santiago · Chile</span>
+    <h1>Espacios que<br><em>Inspiran</em></h1>
+    <p class="hero-sub">
+      Oficinas privadas, salas de reuniones y escritorios diseñados para que trabajes a tu máximo nivel.
+    </p>
+    <div class="hero-ctas">
+      <a href="#espacios"    class="btn-gold">Ver Espacios</a>
+      <a href="registro.html" class="btn-outline-white">Crear Cuenta</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ========== ESPACIOS ========== -->
+<section id="espacios" class="section">
+  <div class="container">
+
+    <div class="row mb-5 fade-up">
+      <div class="col-lg-6">
+        <p class="section-label">Nuestros Espacios</p>
+        <h2 class="section-title">El espacio <em>perfecto</em><br>para cada necesidad</h2>
+        <div class="divider"></div>
+        <p class="section-desc">
+          Desde escritorios individuales hasta oficinas privadas completamente equipadas.
+          Regístrate y reserva en minutos.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Escritorio Individual -->
+      <div class="col-sm-6 col-lg-4 fade-up">
+        <div class="space-card">
+          <img src="recursos/Placeholder.png" class="space-card-img" alt="Escritorio Individual">
+          <div class="space-card-body">
+            <p class="space-tag">Escritorio Individual</p>
+            <h3>Solo Desk</h3>
+            <p>Espacio personal con todo lo necesario para concentrarte y ser productivo.</p>
+            <div class="space-meta">
+              <span class="meta-pill"><i class="bi bi-person me-1"></i>1 persona</span>
+              <span class="meta-pill"><i class="bi bi-wifi me-1"></i>WiFi</span>
+              <span class="meta-pill"><i class="bi bi-clock me-1"></i>08:00–18:00</span>
             </div>
+            <p class="space-price">$5.000 <span>/ hora</span></p>
+            <a href="login.html" class="btn-dark-full">Reservar →</a>
+          </div>
+        </div>
+      </div>
 
-    </Header>
-
-    <hr>
-    <main> <!--contenedor Main con el fondo de inicio-->
-
-        <Section><!--seccion de salas para mostrar las diferentes salas que tiene el coworking-->
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+      <!-- Sala de Reuniones -->
+      <div class="col-sm-6 col-lg-4 fade-up">
+        <div class="space-card">
+          <img src="recursos/Placeholder.png" class="space-card-img" alt="Sala de Reuniones">
+          <div class="space-card-body">
+            <p class="space-tag">Sala de Reuniones</p>
+            <h3>Meeting Room</h3>
+            <p>Equipada para presentaciones y reuniones con pantalla y pizarra incluidas.</p>
+            <div class="space-meta">
+              <span class="meta-pill"><i class="bi bi-people me-1"></i>8 personas</span>
+              <span class="meta-pill"><i class="bi bi-display me-1"></i>Pantalla</span>
+              <span class="meta-pill"><i class="bi bi-wifi me-1"></i>WiFi</span>
             </div>
-        </Section>
-        
-        <Section> <!--seccion de formulario de reserva para que los usuarios puedan reservar un espacio de coworking-->
+            <p class="space-price">$10.000 <span>/ hora</span></p>
+            <a href="login.html" class="btn-dark-full">Reservar →</a>
+          </div>
+        </div>
+      </div>
 
-            <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      <!-- Oficina Privada -->
+      <div class="col-sm-6 col-lg-4 fade-up">
+        <div class="space-card">
+          <img src="recursos/Placeholder.png" class="space-card-img" alt="Oficina Privada">
+          <div class="space-card-body">
+            <p class="space-tag">Oficina Privada</p>
+            <h3>Private Office</h3>
+            <p>Oficina exclusiva con aire acondicionado, escritorios y pantalla de trabajo.</p>
+            <div class="space-meta">
+              <span class="meta-pill"><i class="bi bi-people me-1"></i>4 personas</span>
+              <span class="meta-pill"><i class="bi bi-thermometer-half me-1"></i>A/C</span>
+              <span class="meta-pill"><i class="bi bi-shield-lock me-1"></i>Privado</span>
+            </div>
+            <p class="space-price">$20.000 <span>/ hora</span></p>
+            <a href="login.html" class="btn-dark-full">Reservar →</a>
+          </div>
+        </div>
+      </div>
 
-                <div class="formulario-card">
-                    <h3 class="text-center mb-4">Reserva de Cowork</h3>
-
-                    <form id="formulario">
-                        <label class="form-label">Nombre:</label>
-                        <input type="text" class="form-control mb-3" name="nombre" required>
-
-                        <label class="form-label">Apellido:</label>
-                        <input type="text" class="form-control mb-3" name="apellido" required>
-
-                        <label class="form-label">Correo:</label>
-                        <input type="email" class="form-control mb-3" name="correo" required>
-
-                        <label class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control mb-3" name="password" minlength="6" required>
-
-                        <div class="row">
-                            <div class="col-6">
-                                <label class="form-label">Día:</label>
-                                <input type="date" class="form-control mb-3" name="fecha" required>
-                            </div>
-                            <div class="col-6">
-                                <label class="form-label">Hora:</label>
-                                <input type="time" class="form-control mb-3" name="hora" min="08:00" max="18:00"
-                                    required>
-                            </div>
-                        </div>
-
-                        <div class="horarios-box">
-                            <p class="mb-0"><strong>Horarios Disponibles:</strong></p>
-                            <small>Lunes a Viernes: 08:00 - 18:00 | Sábado: 08:00 - 14:00</small>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary w-100 mt-3">Registrar Espacio</button>
-                    </form>
-                </div>
-            </div> <!--Formulario de reserva agregado para que los usuarios puedan reservar un espacio de coworking-->
+    </div>
+  </div>
+</section>
 
 
-        </Section>
+<!-- ========== SERVICIOS ========== -->
+<section id="servicios" class="section" style="background-color: var(--white);">
+  <div class="container">
 
-    </main>
+    <div class="row mb-5 fade-up">
+      <div class="col-lg-5">
+        <p class="section-label">Lo que Incluye</p>
+        <h2 class="section-title">Todo lo que<br><em>necesitas</em></h2>
+        <div class="divider"></div>
+      </div>
+    </div>
 
-    <hr>
+    <div class="row g-3">
+      <div class="col-6 col-lg-3 fade-up">
+        <div class="service-item">
+          <div class="service-icon"><i class="bi bi-wifi"></i></div>
+          <h4>WiFi de Alta Velocidad</h4>
+          <p>Fibra óptica simétrica en todos los espacios.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 fade-up">
+        <div class="service-item">
+          <div class="service-icon"><i class="bi bi-cup-hot"></i></div>
+          <h4>Café & Snacks</h4>
+          <p>Disponibles sin costo adicional.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 fade-up">
+        <div class="service-item">
+          <div class="service-icon"><i class="bi bi-printer"></i></div>
+          <h4>Impresión</h4>
+          <p>Impresora y escáner para todos.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 fade-up">
+        <div class="service-item">
+          <div class="service-icon"><i class="bi bi-bicycle"></i></div>
+          <h4>Estacionamiento</h4>
+          <p>Bicicletas y motos sin costo.</p>
+        </div>
+      </div>
+    </div>
 
-    <Footer> <!--inicio FOOTER para que puedan trabajar en el-->
-
-    </Footer>
-
+  </div>
+</section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+<!-- ========== CTA BAND ========== -->
+<section class="cta-band fade-up">
+  <div class="container">
+    <h2>¿Listo para<br><em>trabajar diferente?</em></h2>
+    <p>Crea tu cuenta gratis y reserva tu espacio en menos de 2 minutos.</p>
+    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+      <a href="registro.html" class="btn-gold">Crear Cuenta Gratis</a>
+      <a href="login.html"    class="btn-outline-white">Ya tengo cuenta</a>
+    </div>
+  </div>
+</section>
 
-    <script src="/js/app.js"></script>
 
+<!-- ========== FOOTER ========== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-4">
 
+      <div class="col-12 col-md-4">
+        <div class="footer-brand">WORK<span class="dot">HUB</span></div>
+        <p class="footer-desc">Espacios de coworking para profesionales y equipos que buscan lo mejor.</p>
+        <div class="social-links mt-3">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-2">
+        <p class="footer-title">Espacios</p>
+        <ul class="footer-links">
+          <li><a href="login.html">Solo Desk</a></li>
+          <li><a href="login.html">Meeting Room</a></li>
+          <li><a href="login.html">Private Office</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <p class="footer-title">Horarios</p>
+        <ul class="footer-links">
+          <li><a href="#">Lun–Vie: 08:00–18:00</a></li>
+          <li><a href="#">Sábado: 08:00–14:00</a></li>
+          <li><a href="#">Domingo: Cerrado</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <p class="footer-title">Cuenta</p>
+        <ul class="footer-links">
+          <li><a href="registro.html">Registrarse</a></li>
+          <li><a href="login.html">Iniciar Sesión</a></li>
+          <li><a href="mailto:hola@workhub.cl">hola@workhub.cl</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 WorkHub Coworking · Santiago, Chile</p>
+    </div>
+  </div>
+</footer>
+
+<div id="whToast" class="wh-toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
 </body>
-
 </html>
