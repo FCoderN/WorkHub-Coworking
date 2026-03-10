@@ -13,58 +13,42 @@
 
 <body>
     <Header class="contHero"> <!--contenedor header con el menu de navegacion y tambien con imagen HERO-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!--contenedor menu de navegacion-->
+        <!-- ========== NAVBAR ========== -->
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <nav class="navbar navbar-dark bg-transparent">
-                    <div class="container-fluid">
-                        <a class="navbar-brand d-flex align-items-center" href="#">
-                            <h3 class="mb-0 me-2">WorkHub Coworking</h3>
-                            <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/128/6543/6543839.png" alt="Logo" width="40" height="34" class="d-inline-block align-text-top">  <!--Icono agregado desde pagina externa-->
-                           
-                        </a>
-                    </div>
-                </nav>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+
+                <a class="navbar-brand" href="index.html">
+                    WORK<span class="dot">HUB</span>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav" aria-label="Abrir menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">Home</a>
-                            <!--Enlace agregado para redireccionar a la misma pagina-->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#salas">Salas</a>
-                            <!--Enlace agregado para redireccionar a la seccion de salas-->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#servicios">Servicios</a>
-                            <!--Enlace agregado para redireccionar a la seccion de servicios-->
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false"> <!--Enlace agregado para desplegar el menu de contacto-->
-                                Contacto
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#reserva">Empresas</a></li>
-                                <!--Enlace agregado para UN FORMULARIO PARA EMPRESAS O UN CORREO CONTACTO? -->
-                                <li><a class="dropdown-item" href="#redes">Redes Sociales</a></li>
-                                <!--Enlace agregado para redireccionar A la seccion de redes sociales-->
 
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto gap-lg-1">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#espacios">Espacios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Contacto</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="mailto:hola@workhub.cl">Empresas</a></li>
+                                <li><a class="dropdown-item" href="#footer">Redes Sociales</a></li>
                             </ul>
                         </li>
-
                     </ul>
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-warning btn-lg" type="submit" href="#formulario">Reserva Ahora!</button>
-                        <!--Boton agregado para redireccionar a un formulario de reserva Y A LA AGENDA DISPONIBLE-->
-                    </form>
-                </div>
-            </div>
 
+                    <!-- Botones de Registro e Inicio de Sesión -->
+                    <div class="nav-auth">
+                        <a href="registro.html" class="btn-nav-ghost">Registrarse</a>
+                        <a href="login.html" class="btn-nav-gold">Iniciar Sesión</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
     </Header>
 
     <hr>
@@ -81,7 +65,7 @@
                 </div>
             </div>
         </Section>
-        
+
         <Section> <!--seccion de formulario de reserva para que los usuarios puedan reservar un espacio de coworking-->
 
             <div class="container d-flex justify-content-center align-items-center min-vh-100">
