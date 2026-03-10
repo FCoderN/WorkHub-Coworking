@@ -5,74 +5,138 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WorkHub Coworking</title>
-  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
-<body>
-  <h1>WorkHub Coworking</h1>
+<body class="bg-light">
 
-  <form id="formulario">
+<div class="container py-5">
 
-    <h2>Reserva tu Espacio</h2>
+<h1 class="text-center mb-5">WorkHub Coworking</h1>
 
-    <label>Nombre:</label><br>
-    <input type="text" name="nombre" required><br><br>
+<!-- FORMULARIO -->
 
-    <label>Apellido:</label><br>
-    <input type="text" name="apellido" required><br><br>
+<h2 class="text-center mb-4">Reserva tu Espacio</h2>
 
-    <label>Correo:</label><br>
-    <input type="email" name="correo" required><br><br>
+<div class="row justify-content-center">
+  <div class="col-md-6 col-lg-4">
 
-    <label>Selecciona el espacio:</label><br>
-    <select name="sala" required>
-      <option value="">-- Elige una opción --</option>
-      <option value="escritorio">Escritorio Individual (1 persona - $5.000/hora)</option>
-      <option value="reunion">Sala de Reuniones (8 personas - $10.000/hora)</option>
-      <option value="oficina">Oficina Privada (4 personas - $20.000/hora)</option>
-    </select><br><br>
+    <div class="card shadow">
+      <div class="card-body">
 
-    <label>Día:</label><br>
-    <input type="date" name="fecha" required><br><br>
+        <form id="formulario">
 
-    <label>Hora:</label><br>
-    <input type="time" name="hora" min="08:00" max="18:00" required><br><br>
+          <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Tu nombre" required>
+          </div>
 
-    <p>
-      Horarios:<br>
-      Lunes a Viernes: 08:00 - 18:00<br>
-      Sábado: 08:00 - 14:00
-    </p>
+          <div class="mb-3">
+            <label class="form-label">Apellido</label>
+            <input type="text" class="form-control" name="apellido" placeholder="Tu apellido" required>
+          </div>
 
-    <button type="submit">Reservar</button>
+          <div class="mb-3">
+            <label class="form-label">Correo</label>
+            <input type="email" class="form-control" name="correo" placeholder="nombre@email.com" required>
+          </div>
 
-  </form>
+          <div class="mb-3">
+            <label class="form-label">Selecciona el espacio</label>
+            <select class="form-control" name="sala" required>
+              <option value="">-- Elige una opción --</option>
+              <option value="escritorio">Escritorio Individual</option>
+              <option value="reunion">Sala de Reuniones</option>
+              <option value="oficina">Oficina Privada</option>
+            </select>
+          </div>
 
-  <section id="espacios">
+          <div class="mb-3">
+            <label class="form-label">Día</label>
+            <input type="date" class="form-control" name="fecha" required>
+          </div>
 
-    <h2>Espacios Disponibles</h2>
+          <div class="mb-3">
+            <label class="form-label">Hora</label>
+            <input type="time" class="form-control" name="hora" min="08:00" max="18:00" required>
+          </div>
 
-    <h3>Escritorio Individual</h3>
-    <p>Capacidad: 1 persona</p>
-    <p>Equipamiento: Escritorio, silla ergonómica, WiFi</p>
-    <p>Horario: 08:00 - 18:00</p>
-    <p>Precio: $5.000 por hora</p>
+          <p class="text-muted small">
+            Horarios:<br>
+            Lunes a Viernes: 08:00 - 18:00<br>
+            Sábado: 08:00 - 14:00
+          </p>
 
-    <h3>Sala de Reuniones</h3>
-    <p>Capacidad: 8 personas</p>
-    <p>Equipamiento: Pantalla, pizarra, WiFi</p>
-    <p>Horario: 08:00 - 18:00</p>
-    <p>Precio: $10.000 por hora</p>
+          <button type="submit" class="btn btn-primary w-100">Reservar</button>
 
-    <h3>Oficina Privada</h3>
-    <p>Capacidad: 4 personas</p>
-    <p>Equipamiento: Escritorios, pantalla, aire acondicionado, WiFi</p>
-    <p>Horario: 08:00 - 18:00</p>
-    <p>Precio: $20.000 por hora</p>
+        </form>
 
-  </section>
+      </div>
+    </div>
 
-  <script src="js/app.js"></script>
+  </div>
+</div>
+
+<!-- ESPACIOS -->
+
+<h2 class="text-center mb-4 mt-5">Espacios Disponibles</h2>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+<div class="col">
+<div class="card h-100">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72" class="card-img-top" alt="Escritorio individual">
+<div class="card-body">
+<h5 class="card-title">Escritorio Individual</h5>
+<p class="card-text">
+Capacidad: 1 persona<br>
+Equipamiento: Escritorio, silla ergonómica, WiFi<br>
+Horario: 08:00 - 18:00<br>
+Precio: $5.000 por hora
+</p>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72" class="card-img-top" alt="Sala de reuniones">
+<div class="card-body">
+<h5 class="card-title">Sala de Reuniones</h5>
+<p class="card-text">
+Capacidad: 8 personas<br>
+Equipamiento: Pantalla, pizarra, WiFi<br>
+Horario: 08:00 - 18:00<br>
+Precio: $10.000 por hora
+</p>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36" class="card-img-top" alt="Oficina privada">
+<div class="card-body">
+<h5 class="card-title">Oficina Privada</h5>
+<p class="card-text">
+Capacidad: 4 personas<br>
+Equipamiento: Escritorios, pantalla, aire acondicionado, WiFi<br>
+Horario: 08:00 - 18:00<br>
+Precio: $20.000 por hora
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+
 </body>
-
 </html>
