@@ -9,24 +9,71 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  <header class="contHero vh-100 d-flex align-items-center position-relative"
+  <header id="hero" class="contHero vh-100 d-flex align-items-center position-relative"
     style="background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
     <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+
+    <!-- Navbar-->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          WORK<span class="dot">HUB</span>
+          <img src="https://img.icons8.com/?size=256w&id=yIUhxhKvbhFj&format=png&color=FFFFFF" width="40" alt="logo">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto gap-lg-1">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#seccion-oficinas">Espacios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#seccion-oficinas">Servicios</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#footer">Contacto</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="mailto:hola@workhub.cl">Empresas</a></li>
+                <li><a class="dropdown-item" href="#footer">Redes Sociales</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Botones de Registro e Inicio de Sesión -->
+
+          <div class="nav-auth">
+
+            <a href="#formulario" class="btn-nav-ghost">Registrarse</a>
+            <a href="#hero" class="btn-nav-gold">Iniciar Sesión</a>
+            <a href="#formulario" class="btn-nav-gold">Reserva Ahora!</a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
 
     <div class="container position-relative text-center text-white z-1">
       <h1 class="display-2 fw-bold mb-4">WorkHub CoWorking</h1>
       <p class="lead mb-5 fs-4">Conecta, crea y colabora en el mejor entorno profesional.</p>
       <div class="d-flex justify-content-center gap-3">
         <a href="#formulario" class="btn btn-warning btn-lg px-4 py-2 fw-semibold">Reservar un Espacio</a>
-        <a href="#salas" class="btn btn-outline-light btn-lg px-4 py-2 fw-semibold">Conocer las Salas</a>
+        <a href="#seccion-oficinas" class="btn btn-outline-light btn-lg px-4 py-2 fw-semibold">Conocer las Salas</a>
       </div>
     </div>
 
   </header>
+
+  <!-- Sección Espacios -->
 
   <section id="seccion-oficinas" class="d-flex align-items-center" style="min-height: 100vh; padding: 80px 0 40px;">
     <div class="container-xl">
@@ -102,58 +149,9 @@
     </div>
   </section>
 
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        WORK<span class="dot">HUB</span>
-        <img src="https://img.icons8.com/?size=256w&id=yIUhxhKvbhFj&format=png&color=FFFFFF" width="40" alt="logo">
-      </a>
-
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-label="Abrir menú">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav me-auto gap-lg-1">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#espacios">Espacios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Contacto</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="mailto:hola@workhub.cl">Empresas</a></li>
-              <li><a class="dropdown-item" href="#footer">Redes Sociales</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- Botones de Registro e Inicio de Sesión -->
-        <div class="nav-auth">
-
-          <a href="registro.html" class="btn-nav-ghost">Registrarse</a>
-          <a href="login.html" class="btn-nav-gold">Iniciar Sesión</a>
-          <a href="login.html" class="btn-nav-gold">Reserva Ahora!</a>
-        </div>
-      </div>
-
-    </div>
-  </nav>
-
-  </header>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-
-  <script src="/js/app.js"></script>
-
-  <title>WorkHub Coworking</title>
-
   <!-- FORMULARIO -->
 
-  <h2 class="text-center mb-3">Reserva tu Espacio</h2>
+  <h2 id="formularioTitulo" class="text-center mb-3">Reserva tu Espacio</h2>
 
   <div class="row justify-content-center">
     <div class="col-md-6 col-lg-4">
@@ -216,7 +214,7 @@
 
   </div>
 
-  <footer class="bg-dark text-light pt-4 mt-5">
+  <footer id="footer" class="bg-dark text-light pt-4 mt-5">
 
     <div class="container">
       <div class="row">
@@ -262,7 +260,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="/js/app.js"></script>
 
 </body>
 
