@@ -20,7 +20,7 @@
                         <a class="navbar-brand d-flex align-items-center" href="#">
                             <h3 class="mb-0 me-2">WorkHub Coworking</h3>
                             <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/128/6543/6543839.png" alt="Logo" width="40" height="34" class="d-inline-block align-text-top">  <!--Icono agregado desde pagina externa-->
-                           
+
                         </a>
                     </div>
                 </nav>
@@ -68,20 +68,79 @@
     </Header>
 
     <hr>
-    <main> <!--contenedor Main con el fondo de inicio-->
+    <section id="seccion-oficinas" class="d-flex align-items-center" style="min-height: 100vh; padding: 80px 0 40px;">
+        <div class="container-xl">
+            <h2 class="display-5 text-center mb-5 fw-light">Oficinas Disponibles</h2>
 
-        <Section><!--seccion de salas para mostrar las diferentes salas que tiene el coworking-->
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-md-10 col-lg-8">
+
+                    <div id="carruselOficinas" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card h-100 tarjeta-oficina border-0 shadow-sm">
+                                    <img src="recursos/oficina1.jpg" class="card-img-top" alt="Coworking Abierto">
+                                    <div class="card-body text-center d-flex flex-column p-4">
+                                        <h5 class="card-title fw-bold">Escritorio individual</h5>
+                                        <p class="card-text">
+                                            Capacidad: 1 persona<br>
+                                            Equipamiento: Escritorio, silla ergonómica, WiFi<br>
+                                            Horario: 08:00 - 18:00<br>
+                                        </p>
+                                        <span class="precio-destacado mt-auto fw-bold text-primary">$5.000 / hora</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="card h-100 tarjeta-oficina border-0 shadow-sm">
+                                    <img src="recursos/oficina3.jpg" class="card-img-top" alt="Oficina Privada">
+                                    <div class="card-body text-center d-flex flex-column p-4">
+                                        <h5 class="card-title fw-bold">Sala de Reuniones</h5>
+                                        <p class="card-text">
+                                            Capacidad: 8 personas<br>
+                                            Equipamiento: Pantalla, pizarra, WiFi<br>
+                                            Horario: 08:00 - 18:00<br>
+                                        </p>
+                                        <span class="precio-destacado mt-auto fw-bold text-primary">$10.000 / hora</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="card h-100 tarjeta-oficina border-0 shadow-sm">
+                                    <img src="recursos/oficina5.jpg" class="card-img-top" alt="Sala de Reuniones">
+                                    <div class="card-body text-center d-flex flex-column p-4">
+                                        <h5 class="card-title fw-bold">Oficina Privada</h5>
+                                        <p class="card-text">
+                                            Capacidad: 4 personas<br>
+                                            Equipamiento: Escritorios, pantalla, aire acondicionado, WiFi<br>
+                                            Horario: 08:00 - 18:00<br>
+                                        </p>
+                                        <span class="precio-destacado mt-auto fw-bold text-primary">$20.000 / hora</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselOficinas" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon rounded-circle p-3" aria-hidden="true" style="background-color: rgba(0,0,0,0.5);"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselOficinas" data-bs-slide="next">
+                            <span class="carousel-control-next-icon rounded-circle p-3" aria-hidden="true" style="background-color: rgba(0,0,0,0.5);"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+
+                    </div>
                 </div>
             </div>
-        </Section>
-        
+        </div>
+    </section>
+
+
         <Section> <!--seccion de formulario de reserva para que los usuarios puedan reservar un espacio de coworking-->
 
             <div class="container d-flex justify-content-center align-items-center min-vh-100">
