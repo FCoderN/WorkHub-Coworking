@@ -7,4 +7,3 @@ const formulario = document.getElementById("formulario");
 
             formulario.reset(); // Limpia todos los campos
         });
-        

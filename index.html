@@ -31,7 +31,7 @@
         </a>
 
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-          aria-controls="mainNav" aria-label="Abrir menú">
+          aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -52,11 +52,9 @@
           <!-- Botones de Registro e Inicio de Sesión -->
 
           <div class="nav-auth">
-
-            <a href="#formulario" class="btn-nav-ghost">Registrarse</a>
-            <a href="#hero" class="btn-nav-gold">Iniciar Sesión</a>
             <a href="#formulario" class="btn-nav-gold">Reserva Ahora!</a>
           </div>
+
         </div>
 
       </div>
@@ -76,191 +74,193 @@
   <!-- Sección Espacios -->
 
   <main>
-  <section id="seccion-oficinas" class="d-flex align-items-center" style="min-height: 100vh; padding: 80px 0 40px;">
-    <div class="container-xl">
-      <h2 class="display-5 text-center mb-5 fw-light">Oficinas Disponibles</h2>
+    <section id="seccion-oficinas" class="d-flex align-items-center" style="min-height: 100vh; padding: 80px 0 40px;">
+      <div class="container-xl">
+        <h2 class="display-5 text-center mb-5 fw-light">Oficinas Disponibles</h2>
+
+        <div class="row justify-content-center">
+
+          <div class="col-12 col-md-10 col-lg-8">
+
+            <div id="carruselOficinas" class="carousel slide" data-bs-ride="carousel">
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="card h-100 tarjeta-oficina border-0 shadow-sm">
+                    <img src="recursos/oficina1.jpg" class="card-img-top" alt="Coworking Abierto">
+                    <div class="card-body text-center d-flex flex-column p-4">
+                      <h5 class="card-title fw-bold">Escritorio individual</h5>
+                      <p class="card-text">
+                        Capacidad: 1 persona<br>
+                        Equipamiento: Escritorio, silla ergonómica, WiFi<br>
+                        Horario: 08:00 - 18:00<br>
+                      </p>
+                      <span class="precio-destacado mt-auto fw-bold text-primary">$5.000 / hora</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="card h-100 tarjeta-oficina border-0 shadow-sm">
+                    <img src="recursos/oficina3.jpg" class="card-img-top" alt="Oficina Privada">
+                    <div class="card-body text-center d-flex flex-column p-4">
+                      <h5 class="card-title fw-bold">Sala de Reuniones</h5>
+                      <p class="card-text">
+                        Capacidad: 8 personas<br>
+                        Equipamiento: Pantalla, pizarra, WiFi<br>
+                        Horario: 08:00 - 18:00<br>
+                      </p>
+                      <span class="precio-destacado mt-auto fw-bold text-primary">$10.000 / hora</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="card h-100 tarjeta-oficina border-0 shadow-sm">
+                    <img src="recursos/oficina5.jpg" class="card-img-top" alt="Sala de Reuniones">
+                    <div class="card-body text-center d-flex flex-column p-4">
+                      <h5 class="card-title fw-bold">Oficina Privada</h5>
+                      <p class="card-text">
+                        Capacidad: 4 personas<br>
+                        Equipamiento: Escritorios, pantalla, aire acondicionado, WiFi<br>
+                        Horario: 08:00 - 18:00<br>
+                      </p>
+                      <span class="precio-destacado mt-auto fw-bold text-primary">$20.000 / hora</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carruselOficinas"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon rounded-circle p-3" aria-hidden="true"
+                  style="background-color: rgba(0,0,0,0.5);"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carruselOficinas"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon rounded-circle p-3" aria-hidden="true"
+                  style="background-color: rgba(0,0,0,0.5);"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICIOS ========== -->
+
+    <section id="servicios" class="section">
+      <div class="container">
+
+        <div class="row mb-5">
+          <div class="col-lg-5 mx-auto text-center">
+            <p class="section-label">Lo que Incluye</p>
+            <h2 class="section-title">Todo lo que<br><em>necesitas</em></h2>
+            <div class="divider mx-auto"></div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-6 col-lg-3">
+            <div class="service-item">
+              <div class="service-icon"><i class="bi bi-wifi"></i></div>
+              <h4>WiFi de Alta Velocidad</h4>
+              <p>Fibra óptica simétrica en todos los espacios.</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="service-item">
+              <div class="service-icon"><i class="bi bi-cup-hot"></i></div>
+              <h4>Café & Snacks</h4>
+              <p>Disponibles sin costo adicional.</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="service-item">
+              <div class="service-icon"><i class="bi bi-printer"></i></div>
+              <h4>Impresión</h4>
+              <p>Impresora y escáner para todos.</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="service-item">
+              <div class="service-icon"><i class="bi bi-bicycle"></i></div>
+              <h4>Estacionamiento</h4>
+              <p>Bicicletas y motos sin costo.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+
+    <section>
+      <h2 id="formularioTitulo" class="text-center mb-3">Reserva tu Espacio</h2>
 
       <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
 
-        <div class="col-12 col-md-10 col-lg-8">
+          <div class="card shadow">
+            <div class="card-body">
 
-          <div id="carruselOficinas" class="carousel slide" data-bs-ride="carousel">
+              <form id="formulario">
 
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card h-100 tarjeta-oficina border-0 shadow-sm">
-                  <img src="recursos/oficina1.jpg" class="card-img-top" alt="Coworking Abierto">
-                  <div class="card-body text-center d-flex flex-column p-4">
-                    <h5 class="card-title fw-bold">Escritorio individual</h5>
-                    <p class="card-text">
-                      Capacidad: 1 persona<br>
-                      Equipamiento: Escritorio, silla ergonómica, WiFi<br>
-                      Horario: 08:00 - 18:00<br>
-                    </p>
-                    <span class="precio-destacado mt-auto fw-bold text-primary">$5.000 / hora</span>
-                  </div>
+                <div class="mb-3">
+                  <label class="form-label">Nombre</label>
+                  <input type="text" class="form-control" name="nombre" placeholder="Tu nombre" required>
                 </div>
-              </div>
 
-              <div class="carousel-item">
-                <div class="card h-100 tarjeta-oficina border-0 shadow-sm">
-                  <img src="recursos/oficina3.jpg" class="card-img-top" alt="Oficina Privada">
-                  <div class="card-body text-center d-flex flex-column p-4">
-                    <h5 class="card-title fw-bold">Sala de Reuniones</h5>
-                    <p class="card-text">
-                      Capacidad: 8 personas<br>
-                      Equipamiento: Pantalla, pizarra, WiFi<br>
-                      Horario: 08:00 - 18:00<br>
-                    </p>
-                    <span class="precio-destacado mt-auto fw-bold text-primary">$10.000 / hora</span>
-                  </div>
+                <div class="mb-3">
+                  <label class="form-label">Apellido</label>
+                  <input type="text" class="form-control" name="apellido" placeholder="Tu apellido" required>
                 </div>
-              </div>
 
-              <div class="carousel-item">
-                <div class="card h-100 tarjeta-oficina border-0 shadow-sm">
-                  <img src="recursos/oficina5.jpg" class="card-img-top" alt="Sala de Reuniones">
-                  <div class="card-body text-center d-flex flex-column p-4">
-                    <h5 class="card-title fw-bold">Oficina Privada</h5>
-                    <p class="card-text">
-                      Capacidad: 4 personas<br>
-                      Equipamiento: Escritorios, pantalla, aire acondicionado, WiFi<br>
-                      Horario: 08:00 - 18:00<br>
-                    </p>
-                    <span class="precio-destacado mt-auto fw-bold text-primary">$20.000 / hora</span>
-                  </div>
+                <div class="mb-3">
+                  <label class="form-label">Correo</label>
+                  <input type="email" class="form-control" name="correo" placeholder="nombre@email.com" required>
                 </div>
-              </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Selecciona el espacio</label>
+                  <select class="form-control" name="sala" required>
+                    <option value="">-- Elige una opción --</option>
+                    <option value="escritorio">Escritorio Individual</option>
+                    <option value="reunion">Sala de Reuniones</option>
+                    <option value="oficina">Oficina Privada</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Día</label>
+                  <input type="date" class="form-control" name="fecha" required>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Hora</label>
+                  <input type="time" class="form-control" name="hora" min="08:00" max="18:00" required>
+                </div>
+
+                <p class="text-muted small">
+                  Horarios:<br>
+                  Lunes a Viernes: 08:00 - 18:00<br>
+                  Sábado: 08:00 - 14:00
+                </p>
+
+                <button type="submit" class="btn btn-primary w-100">Reservar</button>
+
+              </form>
+
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carruselOficinas" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon rounded-circle p-3" aria-hidden="true"
-                style="background-color: rgba(0,0,0,0.5);"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carruselOficinas" data-bs-slide="next">
-              <span class="carousel-control-next-icon rounded-circle p-3" aria-hidden="true"
-                style="background-color: rgba(0,0,0,0.5);"></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
-
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SERVICIOS ========== -->
-
-  <section id="servicios" class="section">
-    <div class="container">
-
-      <div class="row mb-5">
-        <div class="col-lg-5 mx-auto text-center">
-          <p class="section-label">Lo que Incluye</p>
-          <h2 class="section-title">Todo lo que<br><em>necesitas</em></h2>
-          <div class="divider mx-auto"></div>
-        </div>
-      </div>
-
-      <div class="row g-3">
-        <div class="col-6 col-lg-3">
-          <div class="service-item">
-            <div class="service-icon"><i class="bi bi-wifi"></i></div>
-            <h4>WiFi de Alta Velocidad</h4>
-            <p>Fibra óptica simétrica en todos los espacios.</p>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="service-item">
-            <div class="service-icon"><i class="bi bi-cup-hot"></i></div>
-            <h4>Café & Snacks</h4>
-            <p>Disponibles sin costo adicional.</p>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="service-item">
-            <div class="service-icon"><i class="bi bi-printer"></i></div>
-            <h4>Impresión</h4>
-            <p>Impresora y escáner para todos.</p>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="service-item">
-            <div class="service-icon"><i class="bi bi-bicycle"></i></div>
-            <h4>Estacionamiento</h4>
-            <p>Bicicletas y motos sin costo.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FORMULARIO -->
-
-  <section>
-  <h2 id="formularioTitulo" class="text-center mb-3">Reserva tu Espacio</h2>
-
-  <div class="row justify-content-center">
-    <div class="col-md-6 col-lg-4">
-
-      <div class="card shadow">
-        <div class="card-body">
-
-          <form id="formulario">
-
-            <div class="mb-3">
-              <label class="form-label">Nombre</label>
-              <input type="text" class="form-control" name="nombre" placeholder="Tu nombre" required>
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">Apellido</label>
-              <input type="text" class="form-control" name="apellido" placeholder="Tu apellido" required>
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">Correo</label>
-              <input type="email" class="form-control" name="correo" placeholder="nombre@email.com" required>
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">Selecciona el espacio</label>
-              <select class="form-control" name="sala" required>
-                <option value="">-- Elige una opción --</option>
-                <option value="escritorio">Escritorio Individual</option>
-                <option value="reunion">Sala de Reuniones</option>
-                <option value="oficina">Oficina Privada</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">Día</label>
-              <input type="date" class="form-control" name="fecha" required>
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">Hora</label>
-              <input type="time" class="form-control" name="hora" min="08:00" max="18:00" required>
-            </div>
-
-            <p class="text-muted small">
-              Horarios:<br>
-              Lunes a Viernes: 08:00 - 18:00<br>
-              Sábado: 08:00 - 14:00
-            </p>
-
-            <button type="submit" class="btn btn-primary w-100">Reservar</button>
-
-          </form>
 
         </div>
       </div>
-
-    </div>
-  </div>
-  </section>
+    </section>
   </main>
 
   <!-- Footer -->
