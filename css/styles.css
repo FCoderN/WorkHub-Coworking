@@ -516,3 +516,83 @@ ANIMACIONES
 }
 .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+  LISTA DE RESERVAS (Módulo 2)
+   ============================================================ */
+
+#seccion-reservas{
+  padding: 0;
+}
+
+.reservas-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.reservas-titulo .badge-count {
+  background-color: rgba(181,136,62,0.12);
+  color: var(--gold);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-left: 6px;
+}
+
+.reserva-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: border-color var(--trans);
+}
+
+.reserva-card:hover {
+  border-color: var(--gold);
+}
+
+.reserva-nombre {
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--dark);
+}
+
+.reserva-detalle {
+  font-size: 0.78rem;
+  color: var(--light);
+}
+
+.btn-eliminar {
+  background: rgba(220,53,69,0.07);
+  color: #dc3545;
+  border: 1px solid rgba(220,53,69,0.2);
+  border-radius: var(--radius);
+  padding: 0.3rem 0.75rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--trans);
+}
+
+.btn-eliminar:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+.reservas-vacio {
+  text-align: center;
+  color: var(--light);
+  font-size: 0.85rem;
+  padding: 2rem 1rem;
+}

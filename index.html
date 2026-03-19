@@ -201,10 +201,10 @@
 
     <section>
       <div class="container">
-        <h2 id="formularioTitulo" class="text-center mb-3">Reserva tu Espacio</h2>
+        <h2 id="reservas-titulo" class="text-center mb-3">Reserva tu Espacio</h2>
 
         <div class="row justify-content-center">
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-4 mb-5">
 
             <div class="card shadow">
               <div class="card-body">
@@ -243,7 +243,9 @@
 
                   <div class="mb-3">
                     <label class="form-label">Hora</label>
-                    <input type="time" class="form-control" name="hora" min="08:00" max="18:00" required>
+                    <select class="form-control" name="hora" id="hora" required>
+                      <option value="">-- Selecciona una hora --</option>
+                    </select>
                   </div>
 
                   <p class="text-muted small">
@@ -252,7 +254,7 @@
                     Sábado: 08:00 - 14:00
                   </p>
 
-                  <button type="submit" class="btn btn-primary w-100">Reservar</button>
+                  <button type="submit" class="btn-dark-full">Reservar</button>
 
                 </form>
 
@@ -261,20 +263,24 @@
 
           </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- CONTENEDOR RESERVAS -->
-  <section class="section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-          <div id="lista-reservas"></div>
+      </div>
+
+    </section>
+
+    <!-- CONTENEDOR RESERVAS -->
+
+    <section id="seccion-reservas" class="section hidden">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6 text-center">
+            <div id="lista-reservas"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- TOAST -->
   <div id="toast" class="wh-toast"></div>
