@@ -1,6 +1,6 @@
-//models/Espacio.js
+//models/Espacios.js
 
-export class Espacio {
+export class Espacios {
 
   constructor({ id, nombre, capacidad, precio, equipamiento }) {
     this.id            = id;
@@ -16,21 +16,21 @@ git
    */
   static obtenerCatalogo() {
     return [
-      new Espacio({
+      new Espacios({
         id: 'escritorio',
         nombre: 'Escritorio Individual',
         capacidad: 1,
         precio: 5000,
         equipamiento: ['Escritorio', 'Silla ergonómica', 'WiFi']
       }),
-      new Espacio({
+      new Espacios({
         id: 'reunion',
         nombre: 'Sala de Reuniones',
         capacidad: 8,
         precio: 10000,
         equipamiento: ['Pantalla', 'Pizarra', 'WiFi']
       }),
-      new Espacio({
+      new Espacios({
         id: 'oficina',
         nombre: 'Oficina Privada',
         capacidad: 4,
@@ -40,14 +40,14 @@ git
     ];
   }
 
-  /** Busca un espacio por su id usando Array.find() */
+  /** Busca un espacios por su id usando Array.find() */
   static buscarPorId(id) {
-    return this.obtenerCatalogo().find(espacio => espacio.id === id);
+    return this.obtenerCatalogo().find(Espacios => Espacios.id === id);
   }
 
   /** Filtra espacios con capacidad >= min usando Array.filter() */
   static filtrarPorCapacidad(min) {
-    return this.obtenerCatalogo().filter(espacio => espacio.capacidad >= min);
+    return this.obtenerCatalogo().filter(Espacios => Espacios.capacidad >= min);
   }
 
   /** Getter — Descripción del equipamiento usando Array.map() */
