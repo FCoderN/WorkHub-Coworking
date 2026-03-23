@@ -1,9 +1,8 @@
-import '../App.css';  
-
+import "../App.css";
 
 function Navbar() {
-    return (
-      <nav className="navbar navbar-expand-lg fixed-top navbar-dark">
+  return (
+    <nav className="navbar navbar-expand-lg fixed-top navbar-dark">
       <div className="container-fluid">
         <a
           className="navbar-brand d-flex align-items-center gap-2"
@@ -71,6 +70,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
-    )};
-    
-   export default Navbar;
+  );
+}
+
+export default Navbar;
