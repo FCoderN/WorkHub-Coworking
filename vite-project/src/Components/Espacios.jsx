@@ -1,11 +1,11 @@
-import Container from "react-bootstrap/Container";
+import Container from"react-bootstrap/Container";
 
 
 function Espacios() {
     // Datos de las oficinas en un array (en vez de repetir HTML)
       const oficinas = [
         {
-            img: '/Images/oficina1.jpg',
+            img: "/Images/oficina1.jpg",
             titulo: "Escritorio Individual",
             capacidad: "1 persona",
             equipamiento: "Escritorio, silla ergonómica, WiFi",
