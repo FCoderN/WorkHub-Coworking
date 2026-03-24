@@ -1,4 +1,5 @@
-import Container from"react-bootstrap/Container";
+import "react-bootstrap/Container";
+import "../App"
 
 
 function Espacios() {
