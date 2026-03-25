@@ -145,9 +145,9 @@ function FormReserva() {
         <main>
 
             <section>
-                <div className="container">
+                <div id="formulario" className="container">
 
-                    <h2 className="text-center mb-3">
+                    <h2  className="text-center mb-3">
                         Reserva tu Espacio
                     </h2>
 
