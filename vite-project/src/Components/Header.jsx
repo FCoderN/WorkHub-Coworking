@@ -1,4 +1,5 @@
 
+<<<<<<< Updated upstream
 
 function Header() {
   return (
@@ -14,3 +15,5 @@ function Header() {
 }
 
 export default Header;
+=======
+>>>>>>> Stashed changes
