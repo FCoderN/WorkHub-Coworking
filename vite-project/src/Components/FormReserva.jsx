@@ -17,7 +17,17 @@ function FormReserva() {
 
     const [mostrarPopup, setMostrarPopup] = useState(false);
 
-    const cerrarPopup = () => setMostrarPopup(false);
+    const cerrarPopup = () => {
+        setMostrarPopup(false); // 1. Oculta el popup
+        setDatosFormulario({    // 2. Limpia los datos para el siguiente cliente
+            nombre: "",
+            apellido: "",
+            correo: "",
+            sala: "",
+            fecha: "",
+            hora: ""
+        });
+    };
 
     // Fecha de hoy (para bloquear fechas pasadas)
     const hoy = new Date().toISOString().split("T")[0];
@@ -128,17 +138,8 @@ function FormReserva() {
         // Mostrar popup
         setMostrarPopup(true);
 
-        // Limpiar formulario
-        setDatosFormulario({
-            nombre: "",
-            apellido: "",
-            correo: "",
-            sala: "",
-            fecha: "",
-            hora: ""
-        });
-
-    };
+        
+        };
 
     return (
         <main>

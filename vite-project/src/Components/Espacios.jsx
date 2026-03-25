@@ -81,6 +81,6 @@ function Espacios() {
               </div>
             </section>
           );
-}
+};
 
 export default Espacios;
