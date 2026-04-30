@@ -1,0 +1,17 @@
+{
+  "name": "workhub-coworking",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WorkHub CoWorking — plataforma de reserva de espacios (MERN Stack)",
+  "scripts": {
+    "dev": "concurrently -n SERVER,CLIENT -c bgBlue.bold,bgGreen.bold \"npm run server\" \"npm run client\"",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "seed": "npm run seed --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
